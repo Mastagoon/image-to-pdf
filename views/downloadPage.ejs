@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Img2Pdf | Download</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="icon" href = "/imgs/icon.png">
+</head>
+<body>
+	<div class="hero">
+		<div class="result">
+			<h2>Your image has been successfully converted</h2>
+			<form action="/downloadpdf" method="POST">
+				<button type = "submit">Download PDF</button>
+			</form>			
+			<a href='/'>Convert a new image</a>
+		</div>
+	</div>
+</body>
+
+<script>
+	const converted = <%- JSON.stringify(converted) %>
+	console.log(converted)
+	if(!converted === "true") {
+		window.location.replace("index")
+	}
+</script>
+
+</html>

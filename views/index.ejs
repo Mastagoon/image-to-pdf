@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="icon" href = "/imgs/icon.png">
+	<title>Img2Pdf</title>
+</head>
+
+<body>
+	<div class="hero">
+		<div class="flex">
+			<h1>Convert any image to a pdf file</h1>
+			<button id = "modal-btn">Choose Image</button>
+			<div id="howto">
+				<p>how it works:</p>
+				<p>1-click upload now or drag your image to the dropping zone</p> 
+				<p>2-click "Convert now" to start converting</p>	
+				<p>3-download your pdf file</p>	
+			</div>
+		</div>
+	</div>
+
+	<!-- the upload dialog -->
+
+	<div class = "modal">
+		<div class="modal-content">
+			<div class = "modal-header">
+				<h3>Upload Image</h3>
+				<span class = "close">&times;</span>
+			</div>
+			<div class="modal-body">
+				<div class="upload-zone">
+					<div class="file-upload">
+						<form action="/upload" method = "POST" enctype="multipart/form-data">
+						<div class="image-upload-wrap">
+							<input class="file-upload-input" type='file' name = "picture" onchange="readURL(this);" accept="image/*" />
+							<div class="drag-text">
+								<h3>Drag and drop a file or click here</h3>
+							</div>
+						</div>
+						<div class="file-upload-content">
+							<img class="file-upload-image" src="#" alt="your image" />
+							<div class="image-title-wrap">
+								<button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+							</div>
+							<button class = "upload-btn" type = "submit" onclick = "converting()">Convert</button>
+						</form>
+						</div>
+						<div class="loading-animation">
+							<p>Please wait while we convert your image</p>
+							<p>(this might take several minutes)</p>
+							<span class="first-ball"></span>
+							<span class="second-ball"></span>
+							<span class="third-ball"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>	
+
+	<!-- scripts -->
+	<script src = "/javascript/jquery-3.4.1.slim.min.js"></script>
+	<script src = "/javascript/main.js"></script>
+</body>
+</html>

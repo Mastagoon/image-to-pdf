@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#hero {
+  background: url("bg.jpg") no-repeat center;
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+}
+
+#hero h1 {
+  margin: 0;
+  color: #2C2D3F;
+  margin-bottom: 65px;
+}
+
+#hero .flex {
+  padding-top: 10%;
+}
+
+#hero .flex p {
+  color: #fff;
+}
+
+#hero .flex #modal-btn {
+  background-color: #F1989F;
+  border: none;
+  outline: none;
+  padding: 25px 60px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 28px;
+  margin: 45px;
+}
+
+#hero .flex #modal-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF6FC), to(#FAA2A8));
+  background: linear-gradient(to bottom, #FFF6FC, #FAA2A8);
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  /* Could be more or less, depending on screen size */
+}
+
+.modal-content .modal-header {
+  text-align: center;
+  border-bottom: 1px solid #988380;
+  padding-bottom: 8px;
+}
+
+.modal-content .modal-header h3 {
+  display: inline;
+  vertical-align: middle;
+  color: #B79E9F;
+}
+
+.modal-content .modal-body {
+  margin: 30px;
+}
+
+.modal-content .modal-body .upload-zone {
+  color: #B79E9F;
+  text-align: center;
+  border: 3px dashed #C7AFB0;
+  padding: 60px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#upload-btn {
+  display: none;
+  background-color: #F1989F;
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 45px;
+}
+
+#upload-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+/*# sourceMappingURL=style.css.map */

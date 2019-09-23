@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<title>Img2Pdf</title>
+</head>
+
+<body>
+	<div id="hero">
+		<div class="flex">
+			<h1>Convert any image to a pdf file</h1>
+			<button id = "modal-btn">Choose Image</button>
+			<div id="howto">
+				<p>how it works:</p>
+				<p>1-click upload now or drag your image to the dropping zone</p> 
+				<p>2-click "Convert now" to start converting</p>	
+				<p>3-download your pdf file</p>	
+			</div>
+		</div>
+	</div>
+
+	<!-- the upload dialog -->
+
+	<div class = "modal">
+		<div class="modal-content">
+			<div class = "modal-header">
+				<h3>Upload Image</h3>
+				<span class = "close">&times;</span>
+			</div>
+			<div class="modal-body">
+				<div class="upload-zone">
+					<form action="/file-upload"
+					method = "POST"
+					class="dropzone"
+					id="uploadWidget">
+					<div class="fallback">
+						<input name="file" type="file" />
+				  	</div>
+				</form>
+				<button id = "upload-btn" class = "modal-btn">Upload</button>
+
+				</div>
+			</div>
+		</div>
+		
+	</div>	
+
+	<!-- scripts -->
+	<script src="dropzone.js"></script>
+	<script src = "main.js"></script>
+</body>
+</html>

@@ -29,7 +29,7 @@ app.post("/upload", (req,res) => {
 		fs.readFile(`./uploads/${req.file.originalname}`, (err, data) => {
 			if(!err) {
 				worker
-				.recognize(data, "eng", {tessjs_create_pdf: "1"})
+				.recognize(data, "en", {tessjs_create_pdf: "1"})
 				.progress(progress => {
 					console.log(progress)
 				})
